@@ -10,7 +10,7 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import logo from "../../img/Group 8.svg";
+import logo from "../../img/photo_2023-08-11_12-01-41-removebg-preview.png";
 import { Email, Favorite, LocationOn, Phone } from "@mui/icons-material";
 const Layout = () => {
   return (
@@ -30,7 +30,7 @@ const Layout = () => {
           padding: "1rem 0 0 0",
         }}
       >
-        <ImageListItem>
+        <ImageListItem sx={{width:110}}>
           <img src={logo} alt="logo brand" />
         </ImageListItem>
         <Stack direction={"column"} gap={2}>
@@ -84,7 +84,7 @@ const Layout = () => {
           <Stack direction={"row"} flex={"auto"}>
             <Stack
               sx={{
-                backgroundColor: "#00715D",
+                backgroundColor: "#1a7cc4",
                 padding: "1rem 5rem",
                 borderRadius: "20px 0 0 0",
               }}

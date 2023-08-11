@@ -22,7 +22,7 @@ const About = () => {
           height: "65vh",
           border: "5px solid #FBD45A",
           zIndex: "4",
-          borderRadius: "0 0 50% 50%",
+          borderRadius: "0 20% 50% 50%",
           top: "40px",
           left: "50px",
         }}
@@ -50,7 +50,7 @@ const About = () => {
         <Stack direction={"column"} gap={3} width={"70%"}>
           <Typography
             variant="span"
-            sx={{ fontFamily: "cursive", color: "#00715D" }}
+            sx={{ fontFamily: "cursive", color: "#1a7cc4" }}
           >
             Welcome to GeTa NGO
           </Typography>
@@ -69,13 +69,13 @@ const About = () => {
               sx={{
                 width: "5px",
                 height: "6vh",
-                backgroundColor: "#00715D",
+                backgroundColor: "#1a7cc4",
               }}
             />
             <Typography>
-              Helped fund <Typography variant="span" sx={{color:"#FBD45A"}}>24,537</Typography> Projects in{" "}
-              <Typography variant="span" sx={{color:"#FBD45A"}}>24</Typography> Countries, Benefiting over{" "}
-              <Typography variant="span" sx={{color:"#FBD45A"}}>8.2</Typography>
+              Helped fund <Typography variant="span" sx={{color:"#FBD45A",fontWeight:600}}>24,537</Typography> Projects in{" "}
+              <Typography variant="span" sx={{color:"#FBD45A",fontWeight:600}}>24</Typography> Countries, Benefiting over{" "}
+              <Typography variant="span" sx={{color:"#FBD45A",fontWeight:600}}>8.2</Typography>
                 {" "}Million people.
             </Typography>
           </Stack>

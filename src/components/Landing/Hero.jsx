@@ -6,7 +6,7 @@ const Hero = () => {
     <Stack
       direction={"row"}
       alignItems={"center"}
-      sx={{ backgroundColor: "#293835", color: "#FFFFFF", padding: "0 0 0 6%" }}
+      sx={{ backgroundColor: "#385b75", color: "#FFFFFF", padding: "0 0 0 6%" }}
     >
       <Stack
         direction={"column"}
@@ -18,7 +18,7 @@ const Hero = () => {
           variant="h4"
           sx={{ color: "#FBD45A", textAlign: "center", fontWeight: "600" }}
         >
-          GETA non-governmental organization
+          GeTa Charity organization
         </Typography>
         <Typography variant="span" sx={{ textAlign: "center" }}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit
