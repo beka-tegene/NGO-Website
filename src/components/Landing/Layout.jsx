@@ -30,7 +30,7 @@ const Layout = () => {
           padding: "1rem 0 0 0",
         }}
       >
-        <ImageListItem sx={{width:110}}>
+        <ImageListItem sx={{ width: "110px" }}>
           <img src={logo} alt="logo brand" />
         </ImageListItem>
         <Stack direction={"column"} gap={2}>
