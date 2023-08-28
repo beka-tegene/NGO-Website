@@ -2,7 +2,6 @@ import React from 'react'
 import Layout from '../components/Landing/Layout'
 import Hero from '../components/Landing/Hero'
 import About from '../components/Landing/About'
-import Contact from '../components/Landing/Contact'
 import Footer from '../components/Landing/Footer'
 import Donate from '../components/Landing/Donate'
 import JoinVolunteers from '../components/Landing/JoinVolunteers'
@@ -23,7 +22,6 @@ const Landing = () => {
         <Testimonial />
         <Gallery />
         <News />
-        <Contact/>
         <Footer />
     </div>
   )

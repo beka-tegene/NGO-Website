@@ -11,6 +11,7 @@ import aboutImage from "../../img/120123184_4328203363916933_1038933823195937221
 const About = () => {
   return (
     <Stack
+      
       direction={"row"}
       gap={20}
       sx={{ padding: "5rem 6%", position: "relative" }}

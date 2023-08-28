@@ -4,14 +4,36 @@ import {
   Divider,
   Icon,
   ImageListItem,
-  Link,
   Stack,
   Toolbar,
   Typography,
+  keyframes,
 } from "@mui/material";
 import React from "react";
 import logo from "../../img/photo_2023-08-11_12-01-41-removebg-preview.png";
+import arrow from "../../img/main-menu-shape-1.png";
 import { Email, Favorite, LocationOn, Phone } from "@mui/icons-material";
+import styled from "@emotion/styled";
+import { HashLink } from "react-router-hash-link";
+
+const slideInAnimation = keyframes`
+  0% {
+    transform: translateX(-20%);
+  }
+  50% {
+    transform: translateX(20%);
+  }
+  100%{
+    transform: translateX(-20%);
+  }
+`;
+
+const AnimatedDiv = styled.div`
+  width: 110px;
+  height: 100px;
+  animation: ${slideInAnimation} 2s ease-in-out infinite;
+`;
+
 const Layout = () => {
   return (
     <AppBar
@@ -33,13 +55,16 @@ const Layout = () => {
         <ImageListItem sx={{ width: "110px" }}>
           <img src={logo} alt="logo brand" />
         </ImageListItem>
+        <AnimatedDiv sx={{ width: "110px" }}>
+          <img src={arrow} alt="arrow brand" />
+        </AnimatedDiv>
         <Stack direction={"column"} gap={2}>
           <Stack direction={"row"} alignItems={"center"} gap={16}>
             <Typography variant="h6" sx={{ fontStyle: "italic" }}>
               Become a{" "}
-              <Typography variant="span" sx={{ textDecoration: "underline" }}>
+              <HashLink to={"#volunteer"} Style={{ textDecoration: "underline" ,color:"#3051F8"}}>
                 volunteers
-              </Typography>
+              </HashLink>
             </Typography>
             <Stack direction={"row"} alignItems={"center"} gap={5}>
               <Stack direction={"row"} alignItems={"center"} gap={2}>
@@ -91,8 +116,9 @@ const Layout = () => {
               direction={"row"}
               gap={5}
             >
-              <Link
-                sx={{
+              <HashLink
+                to={"#home"}
+                style={{
                   color: "#FFFFFF",
                   textDecoration: "none",
                   fontSize: "20px",
@@ -100,9 +126,10 @@ const Layout = () => {
                 }}
               >
                 Home
-              </Link>
-              <Link
-                sx={{
+              </HashLink>
+              <HashLink
+                to={"#about"}
+                style={{
                   color: "#FFFFFF",
                   textDecoration: "none",
                   fontSize: "20px",
@@ -110,9 +137,10 @@ const Layout = () => {
                 }}
               >
                 About
-              </Link>
-              <Link
-                sx={{
+              </HashLink>
+              <HashLink
+                to={"#donation"}
+                style={{
                   color: "#FFFFFF",
                   textDecoration: "none",
                   fontSize: "20px",
@@ -120,9 +148,10 @@ const Layout = () => {
                 }}
               >
                 Donations
-              </Link>
-              <Link
-                sx={{
+              </HashLink>
+              <HashLink
+                to={"#event"}
+                style={{
                   color: "#FFFFFF",
                   textDecoration: "none",
                   fontSize: "20px",
@@ -130,9 +159,10 @@ const Layout = () => {
                 }}
               >
                 Events
-              </Link>
-              <Link
-                sx={{
+              </HashLink>
+              <HashLink
+                to={"#testimonial"}
+                style={{
                   color: "#FFFFFF",
                   textDecoration: "none",
                   fontSize: "20px",
@@ -140,9 +170,10 @@ const Layout = () => {
                 }}
               >
                 Testimonial
-              </Link>
-              <Link
-                sx={{
+              </HashLink>
+              <HashLink
+                to={"#news"}
+                style={{
                   color: "#FFFFFF",
                   textDecoration: "none",
                   fontSize: "20px",
@@ -150,7 +181,7 @@ const Layout = () => {
                 }}
               >
                 News
-              </Link>
+              </HashLink>
             </Stack>
             <Button
               sx={{
