@@ -13,6 +13,7 @@ import cardImage3 from "../../img/12-los-angeles-ethiopian-orthodox-tewahedo-wed
 const Donate = () => {
   return (
     <Stack
+    id='donate'
       direction={"column"}
       alignItems={"center"}
       gap={4}

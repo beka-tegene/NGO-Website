@@ -4,6 +4,7 @@ import React from "react";
 const JoinVolunteers = () => {
   return (
     <Stack
+    id='volunteer'
       direction={"column"}
       alignItems={"center"}
       gap={4}

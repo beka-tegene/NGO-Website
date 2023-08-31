@@ -3,16 +3,17 @@ import {
   Button,
   Divider,
   Icon,
+  IconButton,
   ImageListItem,
   Stack,
   Toolbar,
   Typography,
   keyframes,
 } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../img/photo_2023-08-11_12-01-41-removebg-preview.png";
 import arrow from "../../img/main-menu-shape-1.png";
-import { Email, Favorite, LocationOn, Phone } from "@mui/icons-material";
+import { Email, Favorite, KeyboardArrowUp, LocationOn, Phone } from "@mui/icons-material";
 import styled from "@emotion/styled";
 import { HashLink } from "react-router-hash-link";
 
@@ -35,6 +36,27 @@ const AnimatedDiv = styled.div`
 `;
 
 const Layout = () => {
+  const [showScrollButton, setShowScrollButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setShowScrollButton(true);
+      } else {
+        setShowScrollButton(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <AppBar
       sx={{
@@ -62,7 +84,10 @@ const Layout = () => {
           <Stack direction={"row"} alignItems={"center"} gap={16}>
             <Typography variant="h6" sx={{ fontStyle: "italic" }}>
               Become a{" "}
-              <HashLink to={"#volunteer"} Style={{ textDecoration: "underline" ,color:"#3051F8"}}>
+              <HashLink
+                to={"#volunteer"}
+                Style={{ textDecoration: "underline", color: "#3051F8" }}
+              >
                 volunteers
               </HashLink>
             </Typography>
@@ -199,6 +224,20 @@ const Layout = () => {
           </Stack>
         </Stack>
       </Toolbar>
+      {showScrollButton && (
+        <IconButton
+          sx={{
+            position: "fixed",
+            bottom: "2rem",
+            right: "2rem",
+            backgroundColor: "#1a7cc4",
+            color: "#FFFFFF",
+          }}
+          onClick={scrollToTop}
+        >
+          <KeyboardArrowUp />
+        </IconButton>
+      )}
     </AppBar>
   );
 };

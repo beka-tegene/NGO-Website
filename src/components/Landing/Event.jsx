@@ -4,6 +4,7 @@ import cardImage2 from "../../img/Ointerest.jpg";
 const Event = () => {
   return (
     <Stack
+    id='event'
       direction={"row"}
       alignItems={"center"}
       justifyContent={"space-between"}

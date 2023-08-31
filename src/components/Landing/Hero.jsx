@@ -4,6 +4,7 @@ import heroImage from "../../img/12-los-angeles-ethiopian-orthodox-tewahedo-wedd
 const Hero = () => {
   return (
     <Stack
+    id='hero'
       direction={"row"}
       alignItems={"center"}
       sx={{ backgroundColor: "#385b75", color: "#FFFFFF", padding: "0 0 0 6%" }}

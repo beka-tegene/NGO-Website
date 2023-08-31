@@ -9,7 +9,7 @@ import React from "react";
 import image from "../../img/Ointerest.jpg";
 const Gallery = () => {
   return (
-    <Stack>
+    <Stack id="gallery">
       <Typography
         sx={{
           width: "100%",
@@ -60,11 +60,11 @@ const Gallery = () => {
                   opacity: 0,
                   zIndex: 2,
                   transition: "opacity 0.3s ease-in-out",
-                  display:"flex",
-                  flexDirection:"column",
-                  alignItems:"center",
-                  justifyContent:"flex-end",
-                  padding:"1rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "flex-end",
+                  padding: "1rem",
                   "&:hover": {
                     opacity: 1,
                   },
@@ -101,11 +101,11 @@ const Gallery = () => {
                   opacity: 0,
                   zIndex: 2,
                   transition: "opacity 0.3s ease-in-out",
-                  display:"flex",
-                  flexDirection:"column",
-                  alignItems:"center",
-                  justifyContent:"flex-end",
-                  padding:"1rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "flex-end",
+                  padding: "1rem",
                   "&:hover": {
                     opacity: 1,
                   },
@@ -142,11 +142,11 @@ const Gallery = () => {
                   opacity: 0,
                   zIndex: 2,
                   transition: "opacity 0.3s ease-in-out",
-                  display:"flex",
-                  flexDirection:"column",
-                  alignItems:"center",
-                  justifyContent:"flex-end",
-                  padding:"1rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "flex-end",
+                  padding: "1rem",
                   "&:hover": {
                     opacity: 1,
                   },
@@ -183,11 +183,11 @@ const Gallery = () => {
                   opacity: 0,
                   zIndex: 2,
                   transition: "opacity 0.3s ease-in-out",
-                  display:"flex",
-                  flexDirection:"column",
-                  alignItems:"center",
-                  justifyContent:"flex-end",
-                  padding:"1rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "flex-end",
+                  padding: "1rem",
                   "&:hover": {
                     opacity: 1,
                   },
@@ -224,11 +224,11 @@ const Gallery = () => {
                   opacity: 0,
                   zIndex: 2,
                   transition: "opacity 0.3s ease-in-out",
-                  display:"flex",
-                  flexDirection:"column",
-                  alignItems:"center",
-                  justifyContent:"flex-end",
-                  padding:"1rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "flex-end",
+                  padding: "1rem",
                   "&:hover": {
                     opacity: 1,
                   },
