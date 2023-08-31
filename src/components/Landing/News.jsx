@@ -4,7 +4,7 @@ import image from "../../img/Ointerest.jpg";
 const News = () => {
   return (
     <Stack
-    id='new'
+    id='news'
       direction={"column"}
       alignItems={"center"}
       justifyContent={"center"}

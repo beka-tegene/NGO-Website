@@ -142,7 +142,7 @@ const Layout = () => {
               gap={5}
             >
               <HashLink
-                to={"#home"}
+                to={"#hero"}
                 style={{
                   color: "#FFFFFF",
                   textDecoration: "none",
