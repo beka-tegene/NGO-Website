@@ -222,6 +222,7 @@ const Layout = () => {
               }}
               variant="contained"
               startIcon={<Favorite />}
+              onClick={()=>navigate("/donation")}
             >
               Donate New
             </Button>

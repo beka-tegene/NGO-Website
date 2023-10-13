@@ -1,4 +1,4 @@
-import { Avatar, Box, Button, Card, Stack, Typography } from "@mui/material";
+import { Avatar, Card, Stack, Typography } from "@mui/material";
 import React from "react";
 import cardImage2 from "../../img/Ointerest.jpg";
 import { FormatQuote } from "@mui/icons-material";
@@ -28,26 +28,12 @@ const Testimonial = () => {
           efficitur. Vestibulum viverra, dolor sit amet ultricies ornare, elit
           justo pretium tellus.
         </Typography>
-        <Box>
-          <Button
-            variant="contained"
-            sx={{
-              backgroundColor: "#FBD45A",
-              color: "#272727",
-              borderRadius: 6,
-              padding: "1rem 2rem",
-              "&:hover": { backgroundColor: "#272727", color: "#FFFFFF" },
-            }}
-          >
-            All Testimonial
-          </Button>
-        </Box>
       </Stack>
       <Stack
         direction={"row"}
         alignItems={"center"}
         gap={2}
-        flex={"1 1 60%"}
+        flex={"1 1 50%"}
         justifyContent={"center"}flexWrap={"wrap"}
         mt={6}
       >

@@ -1,22 +1,10 @@
-import React from 'react'
-import {
-    Box,
-    Button,
-    Card,
-    CardContent,
-    CardMedia,
-    Stack,
-    Typography,
-  } from "@mui/material";
-  import cardImage2 from "../../img/Ointerest.jpg";
+import React from "react";
+import { Card, CardContent, CardMedia, Stack, Typography } from "@mui/material";
+import cardImage2 from "../../img/Ointerest.jpg";
 const AllEvent = () => {
   return (
-    <Stack
-      justifyContent={"space-between"}
-      gap={4}
-      sx={{ padding: "4rem 6%"}}
-    >
-      <Stack  gap={3}>
+    <Stack justifyContent={"space-between"} gap={4} sx={{ padding: "4rem 6%" }}>
+      <Stack gap={3}>
         <Typography
           variant="span"
           sx={{ fontFamily: "cursive", color: "#1a7cc4" }}
@@ -31,7 +19,13 @@ const AllEvent = () => {
           majority have suffered.
         </Typography>
       </Stack>
-      <Stack direction={"row"} alignItems={"center"} justifyContent={"space-between"} gap={2} flexWrap={"wrap"}>
+      <Stack
+        direction={"row"}
+        alignItems={"center"}
+        justifyContent={"space-between"}
+        gap={2}
+        flexWrap={"wrap"}
+      >
         <Card sx={{ maxWidth: 310 }}>
           <CardMedia
             component="img"
@@ -232,7 +226,7 @@ const AllEvent = () => {
         </Card>
       </Stack>
     </Stack>
-  )
-}
+  );
+};
 
-export default AllEvent
+export default AllEvent;
