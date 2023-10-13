@@ -1,6 +1,5 @@
 import {
   Card,
-  CardActions,
   CardContent,
   CardMedia,
   Stack,
@@ -13,7 +12,7 @@ import cardImage3 from "../../img/12-los-angeles-ethiopian-orthodox-tewahedo-wed
 const Donate = () => {
   return (
     <Stack
-    id='donate'
+    id='donation'
       direction={"column"}
       alignItems={"center"}
       gap={4}

@@ -8,13 +8,16 @@ import {
 } from "@mui/material";
 import React from "react";
 import aboutImage from "../../img/120123184_4328203363916933_1038933823195937221_n.jpg";
+import { useNavigate } from "react-router-dom";
 const About = () => {
+  const navigate = useNavigate()
   return (
     <Stack
       id='about'
       direction={"row"}
       gap={20}
       sx={{ padding: "5rem 6%", position: "relative" }}
+      flexWrap={"wrap"}
     >
       <Box
         sx={{
@@ -25,7 +28,13 @@ const About = () => {
           zIndex: "4",
           borderRadius: "0 20% 50% 50%",
           top: "40px",
-          left: "50px",
+          left: "50px",display: {
+            xl: "block",
+            lg: "block",
+            md: "block",
+            sm: "none",
+            xs: "none",
+          },
         }}
       />
       <Box
@@ -35,20 +44,32 @@ const About = () => {
           height: "70vh",
           backgroundColor: "#F9F4E8",
           top: 0,
-          left: 0,
+          left: 0,display: {
+            xl: "block",
+            lg: "block",
+            md: "block",
+            sm: "none",
+            xs: "none",
+          },
         }}
       />
       <ImageListItem
         sx={{
           flex: "1 1 35%",
           borderRadius: "0 20% 50% 50%",
-          overflow: "hidden",
+          overflow: "hidden",display: {
+            xl: "block",
+            lg: "block",
+            md: "block",
+            sm: "none",
+            xs: "none",
+          },
         }}
       >
         <img src={aboutImage} alt="About Image" />
       </ImageListItem>
       <Stack direction={"column"} gap={2} sx={{ flex: "1 1 50%" }}>
-        <Stack direction={"column"} gap={3} width={"70%"}>
+        <Stack direction={"column"} gap={3} >
           <Typography
             variant="span"
             sx={{ fontFamily: "cursive", color: "#1a7cc4" }}
@@ -90,6 +111,7 @@ const About = () => {
                 padding: "1rem 2rem",
                 "&:hover": { backgroundColor: "#272727", color: "#FFFFFF" },
               }}
+              onClick={()=>navigate("/about")}
             >
               Discover More
             </Button>

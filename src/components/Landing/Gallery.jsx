@@ -7,7 +7,9 @@ import {
 } from "@mui/material";
 import React from "react";
 import image from "../../img/Ointerest.jpg";
+import { useNavigate } from "react-router-dom";
 const Gallery = () => {
+  const navigate = useNavigate()
   return (
     <Stack id="gallery">
       <Typography
@@ -33,7 +35,7 @@ const Gallery = () => {
                 }
             `}
           </style>
-          <Card sx={{ maxWidth: "300px", minWidth: "300px" }}>
+          <Card sx={{ maxWidth: "300px", minWidth: "300px" }} onClick={()=>navigate("/gallery")}>
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -74,7 +76,7 @@ const Gallery = () => {
               </Typography>
             </CardActionArea>
           </Card>
-          <Card sx={{ maxWidth: "300px", minWidth: "300px" }}>
+          <Card sx={{ maxWidth: "300px", minWidth: "300px" }} onClick={()=>navigate("/gallery")}>
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -115,7 +117,7 @@ const Gallery = () => {
               </Typography>
             </CardActionArea>
           </Card>
-          <Card sx={{ maxWidth: "300px", minWidth: "300px" }}>
+          <Card sx={{ maxWidth: "300px", minWidth: "300px" }} onClick={()=>navigate("/gallery")}>
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -156,7 +158,7 @@ const Gallery = () => {
               </Typography>
             </CardActionArea>
           </Card>
-          <Card sx={{ maxWidth: "300px", minWidth: "300px" }}>
+          <Card sx={{ maxWidth: "300px", minWidth: "300px" }} onClick={()=>navigate("/gallery")}>
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -197,7 +199,7 @@ const Gallery = () => {
               </Typography>
             </CardActionArea>
           </Card>
-          <Card sx={{ maxWidth: "300px", minWidth: "300px" }}>
+          <Card sx={{ maxWidth: "300px", minWidth: "300px" }} onClick={()=>navigate("/gallery")}>
             <CardActionArea>
               <CardMedia
                 component="img"

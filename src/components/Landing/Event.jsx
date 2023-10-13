@@ -1,15 +1,26 @@
-import { Box, Button, Card, CardContent, CardMedia, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  CardContent,
+  CardMedia,
+  Stack,
+  Typography,
+} from "@mui/material";
 import React from "react";
 import cardImage2 from "../../img/Ointerest.jpg";
+import { useNavigate } from "react-router-dom";
 const Event = () => {
+  const navigate = useNavigate()
   return (
     <Stack
-    id='event'
+      id="event"
       direction={"row"}
       alignItems={"center"}
       justifyContent={"space-between"}
       gap={4}
-      sx={{ padding: "5rem 6%" ,backgroundColor:"#F9F4E8"}}
+      sx={{ padding: "5rem 6%", backgroundColor: "#F9F4E8" }}
+      flexWrap={"wrap"}
     >
       <Stack flex={"1 1 30%"} gap={3}>
         <Typography
@@ -18,29 +29,30 @@ const Event = () => {
         >
           Upcoming events
         </Typography>
-        <Typography variant="h3" sx={{ fontWeight: 900 }} >
+        <Typography variant="h3" sx={{ fontWeight: 900 }}>
           Join our latest upcoming events
         </Typography>
-        <Typography variant="span" >
+        <Typography variant="span">
           There are many variations of passages of lorem ipsum available but the
           majority have suffered.
         </Typography>
         <Box>
-            <Button
-              variant="contained"
-              sx={{
-                backgroundColor: "#FBD45A",
-                color: "#272727",
-                borderRadius: 6,
-                padding: "1rem 2rem",
-                "&:hover": { backgroundColor: "#272727", color: "#FFFFFF" },
-              }}
-            >
-              Discover More
-            </Button>
-          </Box>
+          <Button
+            variant="contained"
+            sx={{
+              backgroundColor: "#FBD45A",
+              color: "#272727",
+              borderRadius: 6,
+              padding: "1rem 2rem",
+              "&:hover": { backgroundColor: "#272727", color: "#FFFFFF" },
+            }}
+            onClick={()=>navigate("/event")}
+          >
+            Discover More
+          </Button>
+        </Box>
       </Stack>
-      <Stack direction={"row"} alignItems={"center"} gap={2} flex={"1 1 70%"}>
+      <Stack direction={"row"} alignItems={"center"} gap={2} flex={"1 1 70%"} flexWrap={"wrap"}>
         <Card sx={{ maxWidth: 345 }}>
           <CardMedia
             component="img"

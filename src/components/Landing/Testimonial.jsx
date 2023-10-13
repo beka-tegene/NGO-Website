@@ -11,7 +11,7 @@ const Testimonial = () => {
       alignItems={"center"}
       justifyContent={"space-between"}
       gap={4}
-      sx={{ padding: "5rem 6%", backgroundColor: "#385b75", color: "#FFFFFF" }}
+      sx={{ padding: "5rem 6%", backgroundColor: "#385b75", color: "#FFFFFF" }}flexWrap={"wrap"}
     >
       <Stack flex={"1 1 40%"} gap={3}>
         <Typography
@@ -48,11 +48,12 @@ const Testimonial = () => {
         alignItems={"center"}
         gap={2}
         flex={"1 1 60%"}
-        justifyContent={"center"}
+        justifyContent={"center"}flexWrap={"wrap"}
+        mt={6}
       >
         <Card
           sx={{
-            width: 500,
+            width: 450,
             border: "7px solid #FBD45A",
             position: "relative",
             overflow: "visible",

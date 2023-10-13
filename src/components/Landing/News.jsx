@@ -20,7 +20,7 @@ const News = () => {
       <Typography variant="h3" sx={{ fontWeight: 900, textAlign: "center" }}>
         Directly from the <br /> latest news and articles
       </Typography>
-      <Stack direction={"row"} gap={3}>
+      <Stack direction={"row"} gap={3} flexWrap={"wrap"}>
         <Card sx={{ maxWidth: 400 }}>
           <CardMedia
             component="img"

@@ -2,42 +2,45 @@ import {
   AppBar,
   Button,
   Divider,
+  Drawer,
   Icon,
   IconButton,
   ImageListItem,
+  List,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  ListSubheader,
   Stack,
   Toolbar,
   Typography,
-  keyframes,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import logo from "../../img/photo_2023-08-11_12-01-41-removebg-preview.png";
-import arrow from "../../img/main-menu-shape-1.png";
-import { Email, Favorite, KeyboardArrowUp, LocationOn, Phone } from "@mui/icons-material";
-import styled from "@emotion/styled";
+import {
+  Email,
+  Favorite,
+  KeyboardArrowUp,
+  LocationOn,
+  Phone,
+  Menu,
+  Home,
+} from "@mui/icons-material";
 import { HashLink } from "react-router-hash-link";
-
-const slideInAnimation = keyframes`
-  0% {
-    transform: translateX(-20%);
-  }
-  50% {
-    transform: translateX(20%);
-  }
-  100%{
-    transform: translateX(-20%);
-  }
-`;
-
-const AnimatedDiv = styled.div`
-  width: 110px;
-  height: 100px;
-  animation: ${slideInAnimation} 2s ease-in-out infinite;
-`;
+import { useNavigate } from "react-router-dom";
 
 const Layout = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
+  const [openMenu, setOpenMenu] = useState();
+  const navigate = useNavigate();
+  const handleMenuClick = () => {
+    setOpenMenu(!openMenu);
+  };
 
+  const handleSectionClick = (sectionId) => {
+    navigate(`/#${sectionId}`);
+    setOpenMenu(false);
+  };
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 100) {
@@ -74,60 +77,61 @@ const Layout = () => {
           padding: "1rem 0 0 0",
         }}
       >
-        <ImageListItem sx={{ width: "110px" }}>
-          <img src={logo} alt="logo brand" />
+        <ImageListItem sx={{ maxWidth: 110, minWidth: 110 }}>
+          <img
+            src={logo}
+            alt="logo_brand"
+            style={{ maxWidth: 110, minWidth: 110 }}
+          />
         </ImageListItem>
-        <AnimatedDiv sx={{ width: "110px" }}>
-          <img src={arrow} alt="arrow brand" />
-        </AnimatedDiv>
-        <Stack direction={"column"} gap={2}>
-          <Stack direction={"row"} alignItems={"center"} gap={16}>
-            <Typography variant="h6" sx={{ fontStyle: "italic" }}>
-              Become a{" "}
-              <HashLink
-                to={"#volunteer"}
-                Style={{ textDecoration: "underline", color: "#3051F8" }}
-              >
-                volunteers
-              </HashLink>
-            </Typography>
-            <Stack direction={"row"} alignItems={"center"} gap={5}>
-              <Stack direction={"row"} alignItems={"center"} gap={2}>
-                <Icon>
-                  <Phone />
-                </Icon>
-                <Stack>
-                  <Typography variant="caption">Helpline</Typography>
-                  <Typography variant="subtitle2">+251 911 456 878</Typography>
-                </Stack>
+        <Stack
+          direction={"column"}
+          alignItems={"flex-end"}
+          gap={2}
+          sx={{
+            display: {
+              xl: "flex",
+              lg: "flex",
+              md: "flex",
+              sm: "none",
+              xs: "none",
+            },
+          }}
+        >
+          <Stack direction={"row"} alignItems={"center"} gap={5}>
+            <Stack direction={"row"} alignItems={"center"} gap={2}>
+              <Icon>
+                <Phone />
+              </Icon>
+              <Stack>
+                <Typography variant="caption">Helpline</Typography>
+                <Typography variant="subtitle2">+251 911 456 878</Typography>
               </Stack>
-              <Divider
-                sx={{ width: "2px", height: "7vh", backgroundColor: "#ececec" }}
-              />
-              <Stack direction={"row"} alignItems={"center"} gap={2}>
-                <Icon>
-                  <Email />
-                </Icon>
-                <Stack>
-                  <Typography variant="caption">Send email</Typography>
-                  <Typography variant="subtitle2">getango@gmail.com</Typography>
-                </Stack>
+            </Stack>
+            <Divider
+              sx={{ width: "2px", height: "7vh", backgroundColor: "#ececec" }}
+            />
+            <Stack direction={"row"} alignItems={"center"} gap={2}>
+              <Icon>
+                <Email />
+              </Icon>
+              <Stack>
+                <Typography variant="caption">Send email</Typography>
+                <Typography variant="subtitle2">getango@gmail.com</Typography>
               </Stack>
-              <Divider
-                sx={{ width: "2px", height: "7vh", backgroundColor: "#ececec" }}
-              />
-              <Stack direction={"row"} alignItems={"center"} gap={2}>
-                <Icon>
-                  <LocationOn />
-                </Icon>
-                <Stack>
-                  <Typography variant="caption">
-                    2R39+VV5, Addis Ababa
-                  </Typography>
-                  <Typography variant="subtitle2">
-                    Jacros - Salite Mehret Rd
-                  </Typography>
-                </Stack>
+            </Stack>
+            <Divider
+              sx={{ width: "2px", height: "7vh", backgroundColor: "#ececec" }}
+            />
+            <Stack direction={"row"} alignItems={"center"} gap={2}>
+              <Icon>
+                <LocationOn />
+              </Icon>
+              <Stack>
+                <Typography variant="caption">2R39+VV5, Addis Ababa</Typography>
+                <Typography variant="subtitle2">
+                  Jacros - Salite Mehret Rd
+                </Typography>
               </Stack>
             </Stack>
           </Stack>
@@ -142,7 +146,7 @@ const Layout = () => {
               gap={5}
             >
               <HashLink
-                to={"#hero"}
+                to={"/#hero"}
                 style={{
                   color: "#FFFFFF",
                   textDecoration: "none",
@@ -153,7 +157,7 @@ const Layout = () => {
                 Home
               </HashLink>
               <HashLink
-                to={"#about"}
+                to={"/#about"}
                 style={{
                   color: "#FFFFFF",
                   textDecoration: "none",
@@ -164,7 +168,7 @@ const Layout = () => {
                 About
               </HashLink>
               <HashLink
-                to={"#donation"}
+                to={"/#donation"}
                 style={{
                   color: "#FFFFFF",
                   textDecoration: "none",
@@ -175,7 +179,7 @@ const Layout = () => {
                 Donations
               </HashLink>
               <HashLink
-                to={"#event"}
+                to={"/#event"}
                 style={{
                   color: "#FFFFFF",
                   textDecoration: "none",
@@ -186,7 +190,7 @@ const Layout = () => {
                 Events
               </HashLink>
               <HashLink
-                to={"#testimonial"}
+                to={"/#testimonial"}
                 style={{
                   color: "#FFFFFF",
                   textDecoration: "none",
@@ -197,7 +201,7 @@ const Layout = () => {
                 Testimonial
               </HashLink>
               <HashLink
-                to={"#news"}
+                to={"/#news"}
                 style={{
                   color: "#FFFFFF",
                   textDecoration: "none",
@@ -223,6 +227,64 @@ const Layout = () => {
             </Button>
           </Stack>
         </Stack>
+        <Stack
+          sx={{
+            display: {
+              xl: "none",
+              lg: "none",
+              md: "none",
+              sm: "block",
+              xs: "block",
+            },
+          }}
+        >
+          <IconButton onClick={handleMenuClick}>
+            <Menu sx={{ color: "#272727", fontSize: "32px" }} />
+          </IconButton>
+        </Stack>
+        <Drawer
+          anchor={"right"}
+          open={openMenu}
+          onClose={() => setOpenMenu(false)}
+        >
+          <List
+            sx={{
+              width: "100%",
+              maxWidth: 360,
+              bgcolor: "#001F3F",
+              height: "100dvh",
+              color: "#B7B7B7",
+            }}
+            component="nav"
+            aria-labelledby="nested-list-subheader"
+            subheader={
+              <ListSubheader
+                component="div"
+                id="nested-list-subheader"
+                sx={{ backgroundColor: "#001F3F", paddingBottom: "1rem" }}
+              >
+                <ImageListItem sx={{ width: "80px", height: "9vh" }}>
+                  <img
+                    src={`${logo}?w=164&h=164&fit=crop&auto=format`}
+                    alt="Hero"
+                  />
+                </ImageListItem>
+              </ListSubheader>
+            }
+          >
+            <HashLink to={"#home"}>
+              <ListItemButton
+                sx={{ padding: "0.5rem 4rem .5rem 1rem" }}
+                onClick={() => handleSectionClick("home")}
+              >
+                <ListItemIcon>
+                  <Home sx={{ color: "#FFD70090" }} />
+                </ListItemIcon>
+                <ListItemText primary="Home" />
+              </ListItemButton>
+            </HashLink>
+          </List>
+        </Drawer>
       </Toolbar>
       {showScrollButton && (
         <IconButton

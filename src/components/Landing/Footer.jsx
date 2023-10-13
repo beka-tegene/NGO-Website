@@ -16,7 +16,7 @@ const Footer = () => {
     <Stack
       direction={"column"}
       justifyContent={"center"}
-      sx={{ backgroundColor: "#385b75", color: "#FFFFFF" }}
+      sx={{ backgroundColor: "#385b75", color: "#FFFFFF" }}flexWrap={"wrap"}
     >
       <Stack
         direction={"row"}
@@ -26,7 +26,7 @@ const Footer = () => {
           padding: "3rem 6%",
           backgroundColor: "#385b75",
           color: "#FFFFFF",
-        }}
+        }}flexWrap={"wrap"}
       >
         <Stack flex={"1 1 20%"} gap={3}>
           <ImageListItem sx={{ width: "110px" }}>
