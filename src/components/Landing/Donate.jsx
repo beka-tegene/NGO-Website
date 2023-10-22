@@ -27,21 +27,21 @@ const Donate = () => {
       <Typography variant="h3" sx={{ fontWeight: 900 }} textAlign={"center"}>
         Find the popular cause <br /> and donate them
       </Typography>
-      <Stack
+      {/* <Stack
         direction={"column"}
         flexWrap={"wrap"}
-        gap={5}
+        gap={0}
         alignItems={"center"}
         justifyContent={"center"}
-      >
+      > */}
         <Stack
           direction={"row"}
           flexWrap={"wrap"}
-          gap={5}
+          gap={3}
           alignItems={"center"}
           justifyContent={"center"}
         >
-          <Card sx={{ maxWidth: 345 }}>
+          <Card sx={{ maxWidth: 310 }}>
             <CardMedia
               component="img"
               alt="green iguana"
@@ -63,7 +63,7 @@ const Donate = () => {
               </Typography>
             </CardContent>
           </Card>
-          <Card sx={{ maxWidth: 345 }}>
+          <Card sx={{ maxWidth: 310 }}>
             <CardMedia
               component="img"
               alt="green iguana"
@@ -85,15 +85,15 @@ const Donate = () => {
               </Typography>
             </CardContent>
           </Card>
-        </Stack>
+        {/* </Stack>
         <Stack
           direction={"row"}
           flexWrap={"wrap"}
           gap={5}
           alignItems={"center"}
           justifyContent={"center"}
-        >
-          <Card sx={{ maxWidth: 345 }}>
+        > */}
+          <Card sx={{ maxWidth: 310 }}>
             <CardMedia
               component="img"
               alt="green iguana"
@@ -115,7 +115,7 @@ const Donate = () => {
               </Typography>
             </CardContent>
           </Card>
-          <Card sx={{ maxWidth: 345 }}>
+          <Card sx={{ maxWidth: 310 }}>
             <CardMedia
               component="img"
               alt="green iguana"
@@ -138,7 +138,7 @@ const Donate = () => {
             </CardContent>
           </Card>
         </Stack>
-      </Stack>
+      {/* </Stack> */}
     </Stack>
   );
 };

@@ -27,12 +27,17 @@ import {
   Home,
 } from "@mui/icons-material";
 import { HashLink } from "react-router-hash-link";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Layout = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
   const [openMenu, setOpenMenu] = useState();
   const navigate = useNavigate();
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   const handleMenuClick = () => {
     setOpenMenu(!openMenu);
   };
@@ -222,7 +227,7 @@ const Layout = () => {
               }}
               variant="contained"
               startIcon={<Favorite />}
-              onClick={()=>navigate("/donation")}
+              onClick={() => navigate("/donation")}
             >
               Donate New
             </Button>
