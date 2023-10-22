@@ -7,16 +7,26 @@ import {
   Telegram,
   Twitter,
 } from "@mui/icons-material";
-import { Button, Icon, ImageListItem, Stack, Typography } from "@mui/material";
+import {
+  Button,
+  Icon,
+  IconButton,
+  ImageListItem,
+  Stack,
+  Typography,
+} from "@mui/material";
 import React from "react";
 import logo from "../../img/photo_2023-08-11_12-01-41-removebg-preview.png";
 import { HashLink } from "react-router-hash-link";
+import { useNavigate } from "react-router-dom";
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <Stack
       direction={"column"}
       justifyContent={"center"}
-      sx={{ backgroundColor: "#385b75", color: "#FFFFFF" }}flexWrap={"wrap"}
+      sx={{ backgroundColor: "#385b75", color: "#FFFFFF" }}
+      flexWrap={"wrap"}
     >
       <Stack
         direction={"row"}
@@ -26,7 +36,8 @@ const Footer = () => {
           padding: "3rem 6%",
           backgroundColor: "#385b75",
           color: "#FFFFFF",
-        }}flexWrap={"wrap"}
+        }}
+        flexWrap={"wrap"}
       >
         <Stack flex={"1 1 20%"} gap={3}>
           <ImageListItem sx={{ width: "110px" }}>
@@ -45,20 +56,66 @@ const Footer = () => {
             }}
             variant="contained"
             startIcon={<Favorite />}
+            onClick={() => navigate("/donation")}
           >
             Donate New
           </Button>
         </Stack>
         <Stack flex={"1 1 20%"} gap={3}>
           <Typography variant="h6" fontWeight={"bold"}>
-            Links
+            Quick Links
           </Typography>
           <Stack gap={1.5}>
-            <HashLink>About us</HashLink>
-            <HashLink>Contact</HashLink>
-            <HashLink>Latest News</HashLink>
-            <HashLink>Recent Events</HashLink>
-            <HashLink>Donations</HashLink>
+            <HashLink
+              style={{
+                color: "#FFFFFF",
+                textDecoration: "none",
+                width: "fit-content",
+              }}
+              to={"#about"}
+            >
+              About us
+            </HashLink>
+            <HashLink
+              style={{
+                color: "#FFFFFF",
+                textDecoration: "none",
+                width: "fit-content",
+              }}
+              to={"#contact"}
+            >
+              Contact
+            </HashLink>
+            <HashLink
+              style={{
+                color: "#FFFFFF",
+                textDecoration: "none",
+                width: "fit-content",
+              }}
+              to={"#news"}
+            >
+              Latest News
+            </HashLink>
+            <HashLink
+              style={{
+                color: "#FFFFFF",
+                textDecoration: "none",
+                width: "fit-content",
+              }}
+              to={"#event"}
+            >
+              Recent Events
+            </HashLink>
+            <HashLink
+              style={{
+                color: "#FFFFFF",
+                textDecoration: "none",
+                width: "fit-content",
+              }}
+              to={"#donation"}
+            >
+              Donations
+            </HashLink>
           </Stack>
         </Stack>
         <Stack flex={"1 1 20%"} gap={3}>
@@ -66,11 +123,56 @@ const Footer = () => {
             Non profit
           </Typography>
           <Stack gap={1.5}>
-            <HashLink>Differently Abled Kids</HashLink>
-            <HashLink>Help Child Cancer</HashLink>
-            <HashLink>Clean Pure Water</HashLink>
-            <HashLink>Give them Education</HashLink>
-            <HashLink>Start a Fundraising</HashLink>
+            <HashLink
+              style={{
+                color: "#FFFFFF",
+                textDecoration: "none",
+                width: "fit-content",
+              }}
+              to={"#"}
+            >
+              Differently Abled Kids
+            </HashLink>
+            <HashLink
+              style={{
+                color: "#FFFFFF",
+                textDecoration: "none",
+                width: "fit-content",
+              }}
+              to={"#"}
+            >
+              Help Child Cancer
+            </HashLink>
+            <HashLink
+              style={{
+                color: "#FFFFFF",
+                textDecoration: "none",
+                width: "fit-content",
+              }}
+              to={"#"}
+            >
+              Clean Pure Water
+            </HashLink>
+            <HashLink
+              style={{
+                color: "#FFFFFF",
+                textDecoration: "none",
+                width: "fit-content",
+              }}
+              to={"#"}
+            >
+              Give them Education
+            </HashLink>
+            <HashLink
+              style={{
+                color: "#FFFFFF",
+                textDecoration: "none",
+                width: "fit-content",
+              }}
+              to={"#"}
+            >
+              Start a Fundraising
+            </HashLink>
           </Stack>
         </Stack>
         <Stack flex={"1 1 20%"} gap={3}>
@@ -99,10 +201,30 @@ const Footer = () => {
             </Stack>
           </Stack>
           <Stack direction={"row"} gap={3}>
-            <Twitter />
-            <Facebook />
-            <Instagram />
-            <Telegram />
+            <IconButton
+             sx={{color:"#FFFFFF"}}
+             onClick={() => window.open("http://www.facebook.com", "_block")}
+            >
+              <Twitter />
+            </IconButton>
+            <IconButton
+             sx={{color:"#FFFFFF"}}
+             onClick={() => window.open("http://www.facebook.com", "_block")}
+            >
+              <Facebook />
+            </IconButton>
+            <IconButton
+             sx={{color:"#FFFFFF"}}
+             onClick={() => window.open("http://www.facebook.com", "_block")}
+            >
+              <Instagram />
+            </IconButton>
+            <IconButton
+             sx={{color:"#FFFFFF"}}
+             onClick={() => window.open("http://www.facebook.com", "_block")}
+            >
+              <Telegram />
+            </IconButton>
           </Stack>
         </Stack>
       </Stack>
